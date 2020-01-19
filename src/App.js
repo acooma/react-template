@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
-import ArticlesPage from "./pages/ArticlesPage.js";
-import ArticlesList from "./pages/ArticlesList.js";
+import InformationPage from "./pages/InformationPage.js";
+import contact from "./pages/contact.js";
 import NavBar from "./components/Navbar.js";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -16,8 +16,8 @@ function App() {
         <div id="">
           <Route path="/" component={Home} exact />
           <Route path="/about" component={AboutPage} exact />
-          <Route path="/articles-list" component={ArticlesList} exact />
-          <Route path="/article/:name" component={ArticlesPage} exact />
+          <Route path="/contact" component={contact} exact />
+          <Route path="/info/:id" component={InformationPage} exact />
         </div>
       </div>
     </Router>

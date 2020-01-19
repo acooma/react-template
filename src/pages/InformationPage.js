@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Table from "../components/Table";
-import 'bootstrap'; 
 
-const Home = ({ match }) => {
-  // const name = match.params.name;
+const InformationPage = ({ match }) => {
+  const id = match.params.id;
 
   const [employeeInfo, setEmployeeInfo] = useState({
     id: 0,
@@ -24,24 +22,28 @@ const Home = ({ match }) => {
       setEmployeeInfo(body);
     };
     fetchData();
-  }, []);
+  }, [id]);
+
 
   if (employeeInfo.data) {
-    console.log("employee_name:", employeeInfo.data[0].employee_name);
-    console.log("data:", employeeInfo);
+    // console.log(employeeInfo.data[0].employee_name);
+    console.log("employeeInfo", id);
   }
 
-  if (!employeeInfo.data) return <h5>loading...</h5>;
+  if (!employeeInfo.data) return <h3>loading...</h3>;
+
+  const otherInfo = employeeInfo.data.filter(object => object.employee_name === id)
+
+  console.log(otherInfo)
+  
 
   return (
     <React.Fragment>
-      <div className="App">
-        <h1>upcoming tech talks</h1>
-
-        <Table data={employeeInfo.data} />
-      </div>
+      <h3>
+        {console.log()}
+      </h3>
     </React.Fragment>
   );
 };
 
-export default Home;
+export default InformationPage;

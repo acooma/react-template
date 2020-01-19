@@ -1,0 +1,13 @@
+.my-nav {
+  background-color: #FFDFD3;
+  height: 50px;
+}
+
+.links {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+

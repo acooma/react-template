@@ -1,0 +1,16 @@
+.table-body {
+  background-color: #FFDFD3;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.row {
+  background-color: #ECAD8F;
+  display: flex;
+  align-items: center;
+}
+div span {
+  font-size: 19px;
+}
