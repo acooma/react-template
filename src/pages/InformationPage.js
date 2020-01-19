@@ -32,15 +32,23 @@ const InformationPage = ({ match }) => {
 
   if (!employeeInfo.data) return <h3>loading...</h3>;
 
-  const otherInfo = employeeInfo.data.filter(object => object.employee_name === id)
+  const employee = employeeInfo.data.filter(object => object.employee_name === id)
 
-  console.log(otherInfo)
+  console.log(employee)
   
 
   return (
     <React.Fragment>
       <h3>
-        {console.log()}
+        {employee[0].employee_name}
+      </h3>
+
+      <h3>
+        {employee[0].employee_salary}
+      </h3>
+
+      <h3>
+        {employee[0].employee_age}
       </h3>
     </React.Fragment>
   );
