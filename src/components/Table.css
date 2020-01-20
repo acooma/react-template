@@ -1,5 +1,4 @@
 .table-body {
-  background-color: #FFDFD3;
 }
 
 .title {
@@ -7,7 +6,7 @@
 }
 
 .row {
-  background-color: #ECAD8F;
+  background-color: #FFDFD3;
   display: flex;
   align-items: center;
 }

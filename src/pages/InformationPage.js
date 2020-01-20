@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 const InformationPage = ({ match }) => {
-  const id = match.params.id;
+  const id = match.params.id
 
   const [employeeInfo, setEmployeeInfo] = useState({
     id: 0,
@@ -24,9 +24,7 @@ const InformationPage = ({ match }) => {
     fetchData();
   }, [id]);
 
-
   if (employeeInfo.data) {
-    // console.log(employeeInfo.data[0].employee_name);
     console.log("employeeInfo", id);
   }
 
@@ -35,21 +33,15 @@ const InformationPage = ({ match }) => {
   const employee = employeeInfo.data.filter(object => object.employee_name === id)
 
   console.log(employee)
-  
 
+  
   return (
     <React.Fragment>
-      <h3>
-        {employee[0].employee_name}
-      </h3>
+      <h3> {employee[0].employee_name} </h3>
 
-      <h3>
-        {employee[0].employee_salary}
-      </h3>
+      <h3>{employee[0].employee_salary}</h3>
 
-      <h3>
-        {employee[0].employee_age}
-      </h3>
+      <h3>{employee[0].employee_age}</h3>
     </React.Fragment>
   );
 };
