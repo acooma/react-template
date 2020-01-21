@@ -9,7 +9,7 @@ const NavBar = props => {
         <div className="links">
           {console.log(props)}
           <Link to="/">home</Link>
-          <Link to="/newSuggestion">make a suggestion</Link>
+          <Link to="/new-suggestion">make a suggestion</Link>
           <Link to="/admin">{props.userName}</Link>
         </div>
       </div>
