@@ -13,7 +13,7 @@ import { StateProvider } from "./state";
 const App = () => {
   const initialState = {
     user: "admin",
-    pw: "nuaslal"
+    pw: "pw"
   };
 
   const reducer = (state, action) => {
@@ -35,7 +35,7 @@ const App = () => {
       <Router>
         <div className="App">
           {console.log(state)}
-          <NavBar userName={state.user} />
+          <NavBar userInfo={state} />
           <Route path="/" component={Home} exact />
           <Route path="/admin" component={Admin} exact />
           <Route path="/new-suggestion" component={NewSuggestion} exact />

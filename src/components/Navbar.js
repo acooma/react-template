@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const NavBar = props => {
-  if (props.userName) {
+  if (props.userInfo.user) {
     return (
       <div className="my-nav">
         <div className="links">
           {console.log(props)}
           <Link to="/">home</Link>
           <Link to="/new-suggestion">make a suggestion</Link>
-          <Link to="/admin">{props.userName}</Link>
+          <Link to="/admin">{props.userInfo.user}</Link>
         </div>
       </div>
     )
@@ -20,8 +20,7 @@ const NavBar = props => {
         <div className="links">
           {console.log(props)}
           <Link to="/">home</Link>
-          <Link to="/admin">analysis</Link>
-          <Link to="/login">{props.userName}</Link>
+          <Link to="/new-suggestion">make a suggestion</Link>
         </div>
       </div>
     )
