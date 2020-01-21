@@ -37,7 +37,6 @@ const Home = ({ match }) => {
     <React.Fragment>
       <div className="App">
         <h1>upcoming tech talks</h1>
-
         <Table data={employeeInfo.data} />
       </div>
     </React.Fragment>
